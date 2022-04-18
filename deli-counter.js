@@ -1,4 +1,41 @@
 // 1. Write your functions here
+const katzDeli = [];
+
+function line(katzDeli){
+  if (katzDeli.length === 0){
+    console.log("The line is currently empty");
+  } else {
+    let orderNum = ""
+    for (let i = 0; i <katzDeli.length; i++){
+      orderNum += `${i + 1}. ${katzDeli[i]} `
+    }
+    console.log(`The line is currently: ${orderNum}`);
+    }
+  }
+
+
+// takeANumber function, uses push() method to add new customerName end of array, then use template literals with interpolation message.
+
+
+function takeANumber(customers, customerName){
+    katzDeli.push(customerName);
+  console.log(`Welcome, ${customerName}, You are number ${customers.length} in line.`)
+}
+
+
+
+// nowServing function, serves next customer in line. we use shift method to remove first item from  katzDeli array. If no customers in line, we output a message.
+
+function nowServing(customers){
+  if (customers.length === 0){
+    console.log("There is nobody waiting to be served!");
+  } else {
+    console.log(`Currently serving ${customers.shift()}`)
+  }
+}
+
+
+
 
 
 // 2. Example Usage
